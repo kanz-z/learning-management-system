@@ -30,13 +30,7 @@ export default function PDFViewer({
   }, []);
 
   if (isAndroid) {
-    return (
-      <PDFViewerAndroid
-        file={file}
-        pageNumber={pageNumber}
-        onLoadSuccess={onLoadSuccess}
-      />
-    );
+    return <PDFViewerAndroid file={file} onLoadSuccess={onLoadSuccess} />;
   }
 
   // Non-Android PDF viewer implementation
